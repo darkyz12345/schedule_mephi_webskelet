@@ -152,3 +152,63 @@ hr {
     background-color: #3a3e5a;
     margin: 10px 0;
 }
+
+
+/* ===== CARD ===== */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 30px;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card-header {
+    background-color: #1e1e2f;
+    color: white;
+    padding: 15px 20px;
+    border-bottom: 2px solid #007bff;
+}
+
+.card-header h5 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* ===== TABLE ===== */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    background-color: #fff;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.styled-table tr:hover {
+    background-color: #f1f3f9;
+}
+
+.styled-table a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.styled-table a:hover {
+    text-decoration: underline;
+}
