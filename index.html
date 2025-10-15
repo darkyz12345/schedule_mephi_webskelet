@@ -1,17 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная(вход)</title>
+    <title>Главная (вход)</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="">
 </head>
 <body>
-    <header></header>
-    <main>
-        <section></section>
+    <header>
+        <button class="menu-btn" id="menuToggle">☰</button>
+        <h1>Панель администратора schedule_mephi</h1>
+        <nav>
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Профиль</a></li>
+                <li><a href="">Войти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <i class="bi bi-person-circle"></i>
+            <div>
+                <h3>Администратор</h3>
+                <p>moderator@gmail.com</p>
+            </div>
+        </div>
+        <hr>
+        <nav class="menu">
+            <a href="#" class="active">Админпанель</a>
+            <p class="menu-title">Главное</p>
+            <a href="#">Что-то</a>
+            <a href="#">Что-то</a>
+            <p class="menu-title">Пользователи</p>
+            <a href="#">Группы</a>
+        </nav>
+    </aside>
+
+    <main id="main">
+        <section>
+            <h2>Контент</h2>
+            <p>Здесь будет текст страницы или таблица данных...</p>
+        </section>
     </main>
-    <footer></footer>
+
+    <footer>
+        <p>2025 Панель администратора schedule_mephi. Все права защищены</p>
+        <nav>
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#">Поддержка</a>
+            <a href="#">Контакты</a>
+        </nav>
+    </footer>
+
+    <script src="js/menu.js"></script>
 </body>
 </html>
