@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная (вход)</title>
+    <link rel="stylesheet" href="css/fontawesome/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header>
         <h1>Панель администратора schedule_mephi</h1>
@@ -30,7 +33,36 @@
                         schedule_mephi
                     </h2>
                     <form id="login-form" action="/login" method="POST">
-                        
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="icon">
+                                    <i class="fa-regular fa-user"></i>
+                                </span>
+                                <input type="text" name="username" id="username" placeholder="Введите ваш логин"
+                                    class="form-control" required="required" autofocus="autofocus">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="icon">
+                                    <i class="fa-solid fa-lock"></i>
+                                </span>
+                                <input type="password" name="password" id="password" placeholder="Введите ваш пароль"
+                                    class="form-control" required="required">
+                                <span class="icon-btn" id="showPass">
+                                    <i class="fa-regular fa-eye"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-action">
+                            <input type="submit" name="commit" id="commit" value="Войти" class="btn-submit">
+                            <div class="right">
+                                <div>
+                                    <a href="">Регистрация</a>
+                                    <a href="">Забыли пароль?</a>
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -46,6 +78,7 @@
         </nav>
     </footer>
 
-    <script src="js/menu.js"></script>
+    <script src="js/logpassword.js"></script>
 </body>
+
 </html>
