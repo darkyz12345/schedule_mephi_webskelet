@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная (вход)</title>
+    <link rel="stylesheet" href="css/fontawesome/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Регистрация нового администратора</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="profile.html">Профиль</a></li>
+                <li><a href="login.html">Войти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main" class="full">
+        <section>
+            <div class="register">
+                <div class="page-header">
+                    <h2>
+                        Регистрация
+                    </h2>
+                    <form id="login-form" action="/register" method="POST">
+                        <div class="register-group">
+                            <label class="required" for="name">Имя</label>
+                            <input type="text" name="name" id="name" placeholder="Введите ваше имя" class="form-control"
+                                required autofocus autocomplete="given-name">
+                            <label class="required" for="name">Фамилия</label>
+                            <input type="text" name="surname" id="surname" placeholder="Введите вашу фамилию"
+                                class="form-control" required auto autocomplete="family-name">
+                            <label for="patronymic">Отчество</label>
+                            <input type="text" name="patronymic" id="patronymic" placeholder="Введите ваше отчество"
+                                class="form-control" autocomplete="additional-name">
+                        </div>
+                        <div class="register-group">
+                            <label for="email" class="required">Почта (e-mail)</label>
+                            <div class="form-group">
+                                <input type="email" name="email" id="email" placeholder="name@example.com" required
+                                    autocomplete="email">
+                                <button type="button" id="confirmEmailBtn" class="btn-confirm">Подтвердить
+                                    почту</button>
+                            </div>
+                            <div class="hidden item" id="hiddenItem">
+                                <label for="codeField" class="required">Введите код, отправленный Вам на почту</label>
+                                <div style="display: flex;">
+                                    <input type="number" min="100000" max="999999" name="confirmcode" id="codeField"
+                                        placeholder="Введите код" required>
+                                    <button type="button" class="btn-confirm" id="confirmCodeBtn">Подтведить</button>
+                                </div>
+                                <p id="codemeassage" style="color: red; font-weight: 200;"></p>
+                            </div>
+                        </div>
+                        <div class="register-group">
+                            <label for="password1" class="required">Пароль</label>
+                            <div style="display: flex;">
+                                <input type="password" id="password1" name="new-password"
+                                    placeholder="Придумайте пароль" autocomplete="new-password" required>
+                                <span role="button" class="icon-btn" id="showPass1" aria-label="Показать пароль"
+                                    tabindex="0" title="Показать пароль">
+                                    <i class="fa-regular fa-eye"></i>
+                                </span>
+                            </div>
+                            <div class="password-hint" id="password1Hint"></div>
+                            <label for="password2" class="required">Повторите пароль</label>
+                            <div style="display: flex;">
+                                <input type="password" id="password2" name="confirm-password"
+                                    placeholder="Повторите пароль" autocomplete="new-password" required>
+                                <span role="button" class="icon-btn" id="showPass2" aria-label="Показать пароль"
+                                    tabindex="0" title="Показать пароль">
+                                    <i class="fa-regular fa-eye"></i>
+                                </span>
+                            </div>
+                            <div class="password-hint" id="password2Hint"></div>
+                        </div>
+                        <div class="form-action">
+                            <input type="submit" name="commit" id="commit" value="Зарегистрироваться" class="btn-submit">
+                            <div class="right">
+                                <div>
+                                    <a href="login.html">Уже есть аккаунт?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>2025 Панель администратора schedule_mephi. Все права защищены</p>
+        <nav>
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#">Поддержка</a>
+            <a href="#">Контакты</a>
+        </nav>
+    </footer>
+
+    <script src="js/register.js"></script>
+</body>
+
+</html>

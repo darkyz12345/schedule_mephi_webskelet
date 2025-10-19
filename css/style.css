@@ -70,53 +70,53 @@ nav a:hover {
 
 /* ===== MENU BUTTON ===== */
 .menu-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 28px;
-  height: 22px;
-  padding: 0;
-  transition: transform 0.3s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 22px;
+    padding: 0;
+    transition: transform 0.3s;
 }
 
 .menu-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  width: 30px;
-  height: 24px;
-  padding: 0;
-  transition: transform 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 30px;
+    height: 24px;
+    padding: 0;
+    transition: transform 0.3s ease;
 }
 
 .menu-btn span {
-  display: block;
-  height: 3px;
-  width: 100%;
-  background-color: white;
-  border-radius: 3px;
-  transition: all 0.3s ease;
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
 }
 
 /* ===== Анимация превращения в крест ===== */
 .menu-btn.active span:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
+    transform: translateY(9px) rotate(45deg);
 }
 
 .menu-btn.active span:nth-child(2) {
-  opacity: 0;
+    opacity: 0;
 }
 
 .menu-btn.active span:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
+    transform: translateY(-9px) rotate(-45deg);
 }
 
 
@@ -258,6 +258,7 @@ hr {
 
 /* ===== АДАПТИВНОСТЬ ===== */
 @media (max-width: 768px) {
+
     /* Уменьшаем отступ у body */
     body {
         padding-top: 60px;
@@ -422,3 +423,89 @@ hr {
     background: #d9d9d0;
     transform: scale(1.03);
 }
+
+/* регистрация */
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    /* чтобы внутренние элементы растягивались */
+    justify-content: flex-start;
+    width: 80%;
+    /* растягивает форму на всю ширину */
+    padding: 20px;
+    margin: 10px auto;
+    /* центрирует форму */
+    background: white;
+    border: 1px solid #1e1e2f;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    /* чуть приятнее визуально */
+}
+
+.register-group {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    /* label и input растягиваются */
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+.register-group label {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.register-group input {
+    width: 100%;
+    /* важно! */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+/* звёздочка после обязательного поля */
+.register-group label.required::after {
+    content: " *";
+    color: red;
+    font-weight: bold;
+}
+
+.btn-confirm {
+    background: #fafa61;
+    border: 2px solid #e0e0cd;
+    border-radius: 10px;
+    /* padding: 5px 5px; */
+    font-size: 1.1em;
+    font-weight: 100;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-confirm:hover {
+    background: #13df1d;
+    transform: scale(1.03);
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}
+
+.password-hint {
+    display: none;
+    font-size: 0.9em;
+    margin-top: 6px;
+    background: #f7f7f7;
+    border-left: 4px solid #1e1e2f;
+    padding: 8px 12px;
+    border-radius: 6px;
+    white-space: pre-line;
+}
+
