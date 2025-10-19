@@ -60,14 +60,17 @@ const hint = document.getElementById("password1Hint");
 const password1 = document.getElementById('password1');
 
 document.getElementById("password1").addEventListener('focus', () => {
-    hint.style.display = 'block';
+    hint.classList.add('show');
     updateHint(password1.value);
 });
 password1.addEventListener('blur', () => {
-    if (password1.value.trim() === "")
-    {
-        hint.style.display = 'none';
-    }
+    const hasLength = password1.value.length >= 8;
+    const hasUpper = /[A-ZА-Я]/.test(password1.value);
+    const hasDigit = /\d/.test(password1.value);
+    const hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(password1.value);
+
+    if (hasLength && hasUpper && hasDigit && hasSpecial)
+        hint.classList.remove('show');
 });
 
 password1.addEventListener('input', () => {
@@ -93,14 +96,14 @@ const hint2 = document.getElementById('password2Hint');
 const password2 = document.getElementById('password2');
 
 password2.addEventListener('focus', () => {
-    hint2.style.display = 'block';
+    hint2.classList.add('show');
     updateHint2(password2.value, password1.value);
 });
 
 password2.addEventListener('blur', () => {
     if (password2.value.trim() === "")
     {
-        hint.style.display = 'none';
+        hint2.classList.remove('show');
     }
 });
 

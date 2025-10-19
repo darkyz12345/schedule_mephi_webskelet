@@ -259,65 +259,127 @@ hr {
 /* ===== АДАПТИВНОСТЬ ===== */
 @media (max-width: 768px) {
 
-    /* Уменьшаем отступ у body */
+    /* ===== Базовые корректировки ===== */
     body {
         padding-top: 60px;
+        font-size: 0.95em;
     }
 
-    /* Шапка — компактнее */
     header {
         padding: 10px 20px;
         height: 60px;
     }
 
     header h1 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
-    /* Скрываем сайдбар по умолчанию */
+    main {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    /* ===== Sidebar ===== */
     .sidebar {
-        position: fixed;
-        top: 60px;
-        left: 0;
         width: 220px;
         height: calc(100vh - 60px);
-        transform: translateX(0);
+        top: 60px;
     }
 
-    /* Когда меню открыто — показываем */
     .sidebar.hidden {
         transform: translateX(-100%);
     }
 
-    /* Кнопка меню всегда видна */
-    .menu-btn {
-        display: block;
-    }
-
-    /* Контент занимает всю ширину */
-    main {
-        margin-left: 0;
-        padding: 20px;
-    }
-
-    /* Карточки — меньше отступов */
+    /* ===== Карточки и таблицы ===== */
     .card-body {
-        padding: 15px;
+        padding: 12px;
     }
 
-    /* Таблица — горизонтальный скролл */
     .styled-table {
         display: block;
         overflow-x: auto;
         white-space: nowrap;
     }
 
-    /* Навигация — вертикальная */
-    nav ul {
+    /* ===== LOGIN ===== */
+    .login {
         flex-direction: column;
+        width: 95%;
+        max-width: 360px;
+        margin: 20px auto;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .form-group {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0;
+        gap: 8px;
+    }
+
+    .form-action {
+        flex-direction: column;
+        align-items: stretch;
         gap: 10px;
     }
+
+    .right div {
+        align-items: flex-start;
+    }
+
+    .btn-submit {
+        width: 100%;
+        padding: 12px;
+        font-size: 1em;
+    }
+
+    /* ===== REGISTER ===== */
+    .register {
+        width: 95%;
+        max-width: 400px;
+        padding: 15px;
+        margin: 20px auto;
+        border-radius: 8px;
+    }
+
+    .register-group {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .register-group input {
+        font-size: 0.95em;
+        padding: 10px;
+    }
+
+    .btn-confirm {
+        width: 100%;
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    /* ===== Подсказки пароля ===== */
+    .password-hint {
+        font-size: 0.85em;
+        padding: 6px 10px;
+        border-left-width: 3px;
+        line-height: 1.3em;
+    }
+
+    /* ===== Навигация ===== */
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px 0;
+    }
+
+    .menu a {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
 }
+
 
 /* login */
 .login {
@@ -507,5 +569,13 @@ hr {
     padding: 8px 12px;
     border-radius: 6px;
     white-space: pre-line;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
+.password-hint.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
