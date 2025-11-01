@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <button class="menu-btn" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <h1>Панель администратора schedule_mephi</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="profile.html">Профиль</a></li>
+                <li><a href="login.html">Войти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside class="sidebar hidden" id="sidebar">
+        <div class="sidebar-header">
+            <i class="bi bi-person-circle"></i>
+            <div>
+                <h3>Администратор</h3>
+                <p>moderator@gmail.com</p>
+            </div>
+        </div>
+        <hr>
+        <nav class="menu">
+            <a href="#" class="active">Админпанель</a>
+            <p class="menu-title">Главное</p>
+            <a href="category.html">Направления подготовки</a>
+            <a href="category.html">Группы</a>
+            <a href="category.html">Типы пар</a>
+            <a href="category.html">Аудитории</a>
+            <a href="category.html">Время пар</a>
+            <a href="category.html">Предметы(дисциплины)</a>
+            <a href="category.html">Преподаватели</a>
+            <a href="category.html">Преподавтель - предметы</a>
+            <a href="category.html">Изменения в расписании</a>
+            <a href="category.html">Изменения в семестре</a>
+            <p class="menu-title">Пользователи</p>
+            <a href="category.html">Администраторы</a>
+            <a href="category.html">Сессии администраторов</a>
+            <a href="category.html">Пользователи</a>
+        </nav>
+    </aside>
+
+    <main id="main" class="full">
+        <section>
+            <div class="content-user">
+                <div class="user container">
+                    <div>
+                        <h1 style="text-align: left;">Профиль</h1>
+                    </div>
+                    <div class="user-block">
+                        <div class="user-img">
+                            <img class="user-img-img" src="images/profile_default.png" alt="">
+                            <div class="username">
+                                <p>username</p>
+                            </div>
+                        </div>
+                        <div class="user-info">
+                            <h2 class="user-title">
+                                Личные данные
+                            </h2>
+                            <ul class="list-user-info">
+                                <li class="list-user">
+                                    <p>Имя:</p>
+                                    <span>Степан</span>
+                                </li>
+                                <li class="list-user">
+                                    <p>Email:</p>
+                                    <span>morgenstep1@gmail.com</span>
+                                </li>
+                                <li class="list-user">
+                                    <p>Роль:</p>
+                                    <span>Владелец</span>
+                                </li>
+                                <li class="list-user">
+                                    <p>Активен аккаунт:</p>
+                                    <span class="active-status">✅ Активен</span>
+                                </li>
+                            </ul>
+                        </div>
+                    <button class="btn-edit">Редактировать данные</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>2025 Панель администратора schedule_mephi. Все права защищены</p>
+        <nav>
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#">Поддержка</a>
+            <a href="#">Контакты</a>
+        </nav>
+    </footer>
+
+    <script src="js/menu.js"></script>
+</body>
+
+</html>
